@@ -1,5 +1,9 @@
 # Smart Mudra Wellness System for Personalized Health Monitoring
 
+<p align="center">
+  <img src="docs/screenshots/mudrahealth-pages/dashboard-page.png" alt="Smart Mudra Wellness Dashboard" width="1000" />
+</p>
+
 Smart Mudra Wellness System is a full-stack wellness and wellness-tracking web application designed to combine the wisdom of traditional hand mudras with personalized health insights, guided practice, and AI-style recommendations. The system provides an interactive dashboard, mudra library, wellness assistant, recommendation engine, and health-monitoring views in one platform.
 
 ## Project Overview
