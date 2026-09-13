@@ -106,6 +106,49 @@ Smart-Mudra-Wellness-System-for-Personalized-Health-Monitoring-
 - AI assistant page
 - Profile page
 
+## Screenshots
+
+The project includes a wellness dashboard, practice flow, and recommendation interfaces. Add final screenshots into the `docs/screenshots` folder and update the image paths below as needed.
+
+### Home / Landing Page
+
+![Home landing page](docs/screenshots/home-page.png)
+
+### Dashboard and Health Overview
+
+![Dashboard overview](docs/screenshots/dashboard.png)
+
+### Mudra Library and Practice Flow
+
+![Mudra library and practice flow](docs/screenshots/mudra-library.png)
+
+## Project Architecture
+
+```mermaid
+flowchart LR
+    U[User] --> FE[Next.js Frontend\nApp Router]
+    FE --> P1[Home Page]
+    FE --> P2[Dashboard]
+    FE --> P3[Mudra Library]
+    FE --> P4[Detection / Practice]
+    FE --> P5[Recommendations]
+    FE --> P6[AI Assistant]
+
+    P2 --> D[Data Layer\nJSON + Local State]
+    P3 --> L[Library Logic\nMudra Definitions]
+    P4 --> A[Practice / Detection Flow]
+    P5 --> R[Recommendation Engine]
+    P6 --> S[Wellness Assistant Logic]
+
+    D --> B[User Health Insights]
+    R --> B
+    S --> B
+    B --> UI[Personalized Guidance]
+    UI --> U
+```
+
+This architecture keeps the interface, recommendation logic, and wellness guidance organized into distinct modules while allowing the app to be expanded with real backend services later.
+
 ## How to Run Locally
 
 ### Prerequisites
