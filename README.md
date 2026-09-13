@@ -108,19 +108,39 @@ Smart-Mudra-Wellness-System-for-Personalized-Health-Monitoring-
 
 ## Screenshots
 
-The project includes a wellness dashboard, practice flow, and recommendation interfaces. Add final screenshots into the `docs/screenshots` folder and update the image paths below as needed.
+The screenshots below capture the main user journeys of the Smart Mudra Wellness app, including signup, login, detection, dashboard, recommendations, library, assistant, and profile views.
 
-### Home / Landing Page
+### Signup Page
 
-![Home landing page](docs/screenshots/home-page.png)
+![Signup page](docs/screenshots/mudrahealth-pages/signup-page.png)
 
-### Dashboard and Health Overview
+### Login Page
 
-![Dashboard overview](docs/screenshots/dashboard.png)
+![Login page](docs/screenshots/mudrahealth-pages/login-page.png)
 
-### Mudra Library and Practice Flow
+### Mudra Detection Page
 
-![Mudra library and practice flow](docs/screenshots/mudra-library.png)
+![Mudra detection page](docs/screenshots/mudrahealth-pages/detection-page.png)
+
+### Dashboard
+
+![Dashboard page](docs/screenshots/mudrahealth-pages/dashboard-page.png)
+
+### Recommendations
+
+![Recommendations page](docs/screenshots/mudrahealth-pages/recommendations-page.png)
+
+### Mudra Library
+
+![Mudra library page](docs/screenshots/mudrahealth-pages/mudra-library-page.png)
+
+### AI Assistant
+
+![Assistant page](docs/screenshots/mudrahealth-pages/assistant-page.png)
+
+### User Profile
+
+![Profile page](docs/screenshots/mudrahealth-pages/profile-page.png)
 
 ## Project Architecture
 
