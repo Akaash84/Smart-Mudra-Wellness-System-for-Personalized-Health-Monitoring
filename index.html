@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Mudra Health Detector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-bg"></div>
+    <main class="app-shell">
+      <section class="hero-card">
+        <div class="hero-topbar">
+          <div>
+            <h1>Smart Mudra Detection</h1>
+            <p>
+              Show one hand to camera and hold a mudra for 2-3 seconds. The app estimates
+              mudra type and confidence from landmark rules.
+            </p>
+          </div>
+          <button class="theme-toggle" id="themeToggle" type="button">Light mode</button>
+        </div>
+      </section>
+
+      <section class="detector-grid">
+        <div class="camera-panel">
+          <video class="input-video" playsinline></video>
+          <canvas class="output-canvas"></canvas>
+          <div class="status-badge" id="cameraStatus">Starting camera...</div>
+        </div>
+
+        <aside class="insights-panel">
+          <div class="card">
+            <label for="targetMudra">Target Mudra for Test</label>
+            <select id="targetMudra">
+              <option value="auto">Auto detect</option>
+              <option value="Gyan Mudra">Gyan Mudra (Jnana)</option>
+              <option value="Apana Mudra">Apana Mudra</option>
+              <option value="Prana Mudra">Prana Mudra</option>
+            </select>
+          </div>
+
+          <div class="card legend-card">
+            <h3>Mudra Color Legend</h3>
+            <div class="legend-list">
+              <div class="legend-item">
+                <span class="legend-swatch swatch-gyan"></span>
+                <div>
+                  <strong>Gyan Mudra</strong>
+                  <p>Thumb and index touch, other fingers extended.</p>
+                </div>
+              </div>
+              <div class="legend-item">
+                <span class="legend-swatch swatch-apana"></span>
+                <div>
+                  <strong>Apana Mudra</strong>
+                  <p>Thumb joins middle and ring fingers.</p>
+                </div>
+              </div>
+              <div class="legend-item">
+                <span class="legend-swatch swatch-prana"></span>
+                <div>
+                  <strong>Prana Mudra</strong>
+                  <p>Thumb joins ring and little fingers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card result-card">
+            <h2 id="detectedMudra">Detecting...</h2>
+            <p class="accuracy"><span id="accuracyValue">0%</span> confidence</p>
+            <div class="meter-wrap">
+              <div class="meter" id="confidenceMeter"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Finger Rule Test Points</h3>
+            <ul id="ruleList" class="rule-list"></ul>
+          </div>
+
+          <div class="card small">
+            <h3>Health Note</h3>
+            <p>
+              This tool is for practice feedback only and not a medical diagnosis.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
